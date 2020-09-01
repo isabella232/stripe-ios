@@ -7,7 +7,6 @@ jobs:
   standard-tests:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
-      resource_class: large
 
     steps:
       - checkout
@@ -17,7 +16,6 @@ jobs:
   integration-tests:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
-      resource_class: large
 
     steps:
       - checkout
@@ -27,7 +25,6 @@ jobs:
   linting-tests:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
-      resource_class: large
 
     steps:
       - checkout
@@ -38,7 +35,6 @@ jobs:
   test-legacy-10:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
-      resource_class: large
 
     steps:
       - checkout
@@ -50,7 +46,6 @@ jobs:
   test-legacy-11:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
-      resource_class: large
 
     steps:
       - checkout
