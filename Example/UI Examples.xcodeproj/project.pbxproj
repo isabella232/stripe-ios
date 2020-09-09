@@ -3,31 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		314F728025098BC5003236BD /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 314F727F25098BC5003236BD /* Stripe */; };
+		314F728125098BC5003236BD /* Stripe in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 314F727F25098BC5003236BD /* Stripe */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		364FC2D2242024CE002879EB /* AUBECSDebitFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364FC2D1242024CE002879EB /* AUBECSDebitFormViewController.swift */; };
 		C1140CC11F1EC0FC002084AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1140CC01F1EC0FC002084AB /* AppDelegate.swift */; };
 		C1140CC31F1EC0FC002084AB /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1140CC21F1EC0FC002084AB /* BrowseViewController.swift */; };
 		C1140CC81F1EC0FC002084AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1140CC71F1EC0FC002084AB /* Assets.xcassets */; };
 		C13A00561F1FFA0D00825683 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A00551F1FFA0D00825683 /* ThemeViewController.swift */; };
 		C13A00581F1FFEC200825683 /* CardFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A00571F1FFEC200825683 /* CardFieldViewController.swift */; };
-		C19A55B01F1EC1ED00C8AABE /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19A55A81F1EC1B000C8AABE /* Stripe.framework */; };
-		C19A55B11F1EC1ED00C8AABE /* Stripe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C19A55A81F1EC1B000C8AABE /* Stripe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C1A5E73E1F293EAF00E0C891 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1A5E73C1F293EAF00E0C891 /* Localizable.strings */; };
 		C1A658E51F1EC7F500799757 /* MockCustomerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A658E41F1EC7F500799757 /* MockCustomerContext.swift */; };
 		C1A658E71F1ED05500799757 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A658E61F1ED05500799757 /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C19A55B21F1EC1ED00C8AABE /* Embed Frameworks */ = {
+		314F728225098BC5003236BD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C19A55B11F1EC1ED00C8AABE /* Stripe.framework in Embed Frameworks */,
+				314F728125098BC5003236BD /* Stripe in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C19A55B01F1EC1ED00C8AABE /* Stripe.framework in Frameworks */,
+				314F728025098BC5003236BD /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,13 +125,16 @@
 				C1140CB91F1EC0FC002084AB /* Sources */,
 				C1140CBA1F1EC0FC002084AB /* Frameworks */,
 				C1140CBB1F1EC0FC002084AB /* Resources */,
-				C19A55B21F1EC1ED00C8AABE /* Embed Frameworks */,
+				314F728225098BC5003236BD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "UI Examples";
+			packageProductDependencies = (
+				314F727F25098BC5003236BD /* Stripe */,
+			);
 			productName = "UI Examples";
 			productReference = C1140CBD1F1EC0FC002084AB /* Stripe UI Examples.app */;
 			productType = "com.apple.product-type.application";
@@ -336,7 +339,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -346,7 +350,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "UI Examples/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.uiexamples;
 				PRODUCT_NAME = "Stripe UI Examples";
 				SWIFT_VERSION = 5.0;
@@ -359,7 +366,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "UI Examples/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.uiexamples;
 				PRODUCT_NAME = "Stripe UI Examples";
 				SWIFT_VERSION = 5.0;
@@ -389,6 +399,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		314F727F25098BC5003236BD /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Stripe;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1140CB51F1EC0FC002084AB /* Project object */;
 }

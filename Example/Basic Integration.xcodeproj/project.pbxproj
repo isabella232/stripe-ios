@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		042CA41D1A685E8D00D778E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA4141A685E8D00D778E7 /* AppDelegate.swift */; };
 		042CA4201A685E8D00D778E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042CA4191A685E8D00D778E7 /* Images.xcassets */; };
 		04BC29A01CD81D3900318357 /* BrowseProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC299F1CD81D3900318357 /* BrowseProductsViewController.swift */; };
-		04D0761D1A69E66F00094431 /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D076191A69C14700094431 /* Stripe.framework */; };
-		04D0761E1A69E66F00094431 /* Stripe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04D076191A69C14700094431 /* Stripe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3143AB43230DF738003A54FC /* BasicIntegrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143AB42230DF738003A54FC /* BasicIntegrationUITests.swift */; };
+		314F728425098BE3003236BD /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 314F728325098BE3003236BD /* Stripe */; };
+		314F728525098BE3003236BD /* Stripe in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 314F728325098BE3003236BD /* Stripe */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B67046BB229F0D7E006CB603 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67046BA229F0D7E006CB603 /* EmojiCell.swift */; };
 		B67046BD229F61CF006CB603 /* EmojiCheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67046BC229F61CF006CB603 /* EmojiCheckoutCell.swift */; };
 		B690AC5122A1A52900D3F50A /* UIColor+Stripe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B690AC5022A1A52900D3F50A /* UIColor+Stripe.swift */; };
@@ -36,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		04D0761F1A69E66F00094431 /* Embed Frameworks */ = {
+		314F728625098BE3003236BD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04D0761E1A69E66F00094431 /* Stripe.framework in Embed Frameworks */,
+				314F728525098BE3003236BD /* Stripe in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D0761D1A69E66F00094431 /* Stripe.framework in Frameworks */,
+				314F728425098BE3003236BD /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,14 +172,17 @@
 				04823F741A6849200098400B /* Sources */,
 				04823F751A6849200098400B /* Frameworks */,
 				04823F761A6849200098400B /* Resources */,
-				04D0761F1A69E66F00094431 /* Embed Frameworks */,
 				C113E0121ECF9D7F002E6E53 /* Carthage Copy Frameworks */,
+				314F728625098BE3003236BD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Basic Integration";
+			packageProductDependencies = (
+				314F728325098BE3003236BD /* Stripe */,
+			);
 			productName = "Stripe iOS Exampe (Simple)";
 			productReference = 04823F781A6849200098400B /* Basic Integration.app */;
 			productType = "com.apple.product-type.application";
@@ -456,8 +459,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "Basic Integration/Basic Integration-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -478,7 +482,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Basic Integration/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.SimpleSDKExample;
 				PRODUCT_NAME = "Basic Integration";
 				PROVISIONING_PROFILE = "";
@@ -506,7 +513,10 @@
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Basic Integration/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.SimpleSDKExample;
 				PRODUCT_NAME = "Basic Integration";
 				PROVISIONING_PROFILE = "";
@@ -531,7 +541,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = BasicIntegrationUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.BasicIntegrationUITests;
@@ -560,7 +574,11 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = BasicIntegrationUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.BasicIntegrationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -602,6 +620,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		314F728325098BE3003236BD /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Stripe;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04823F701A6849200098400B /* Project object */;
 }
