@@ -88,12 +88,6 @@ platform :ios do
     end
   end
 
-  lane :legacy_tests_10 do
-    Dir.chdir("..") do
-      sh("./ci_scripts/run_legacy_tests.sh \"platform=iOS Simulator,name=iPhone 6,OS=10.3.1\"")
-    end
-  end
-
   lane :legacy_tests_11 do
     Dir.chdir("..") do
       sh("./ci_scripts/run_legacy_tests.sh \"platform=iOS Simulator,name=iPhone 6,OS=11.4\"")
