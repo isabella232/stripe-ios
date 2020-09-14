@@ -2,11 +2,6 @@
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-if [[ "${CI}" == "true" && "${TRAVIS_SECURE_ENV_VARS}" != "true" ]]; then
-  echo "WARNING: Skipping fauxpas linting for forked repository"
-  exit 0
-fi
-
 # Assign Xcode developer tools path
 # http://fauxpasapp.com/docs/#i-have-multiple-versions-of-xcode-installed-how-do-i-ensure-faux-pas-uses-the-one-i-want-it-to-use
 export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
