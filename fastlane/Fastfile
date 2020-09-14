@@ -28,21 +28,24 @@ platform :ios do
   lane :all_ci do
     standard_tests
     integration_tests
+    ui_and_analyze_tests
     linting_tests
-    legacy_tests_10
     legacy_tests_11
-    # legacy_tests_12
+    legacy_tests_12
   end
 
   lane :standard_tests do
     old_tests
     install_tests
   end
+ 
+  lane :ui_and_analyze_tests do
+    ui_tests
+    analyze
+  end
   
   lane :linting_tests do
     preflight
-    ui_tests
-    analyze
     builds
     check_docs
   end

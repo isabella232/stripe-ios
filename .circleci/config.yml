@@ -22,6 +22,15 @@ jobs:
       - run: "bundle install"
       - run: "bundle exec fastlane integration_tests"
 
+  ui-and-analyze-tests:
+    macos:
+      xcode: 11.6.0 # Specify the Xcode version to use
+
+    steps:
+      - checkout
+      - run: "bundle install"
+      - run: "bundle exec fastlane ui_and_analyze_tests"
+    
   linting-tests:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
@@ -70,6 +79,7 @@ workflows:
       - standard-tests
       - integration-tests
       - linting-tests
+      - ui-and-analyze-tests
       - lint-fauxpas
       - test-legacy-11
       - test-legacy-12
