@@ -39,7 +39,7 @@ jobs:
     steps:
       - checkout
       - run: "bundle install"
-      - run: "brew install fauxpas"
+      - run: "brew cask install fauxpas"
       - run: "bundle exec fastlane lint_fauxpas"
 
   test-legacy-11:
