@@ -64,7 +64,7 @@ platform :ios do
     end
   end
 
-  lane :lint do
+  lane :lint_fauxpas do
     Dir.chdir("..") do
       sh("./ci_scripts/check_fauxpas.sh")
     end

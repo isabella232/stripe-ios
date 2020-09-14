@@ -32,6 +32,16 @@ jobs:
       - run: "bundle add jazzy"
       - run: "bundle exec fastlane linting_tests"
 
+  linting-tests:
+    macos:
+      xcode: 11.6.0 # Specify the Xcode version to use
+
+    steps:
+      - checkout
+      - run: "bundle install"
+      - run: "brew install fauxpas"
+      - run: "bundle exec fastlane lint_fauxpas"
+    
   test-legacy-10:
     macos:
       xcode: 11.6.0 # Specify the Xcode version to use
