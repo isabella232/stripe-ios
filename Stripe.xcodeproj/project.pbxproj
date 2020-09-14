@@ -943,8 +943,6 @@
 		04F39F101AEF2AFE005B926E /* StripeiOS-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "StripeiOS-Debug.xcconfig"; sourceTree = "<group>"; };
 		04F39F111AEF2AFE005B926E /* StripeiOS-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "StripeiOS-Release.xcconfig"; sourceTree = "<group>"; };
 		04F39F121AEF2AFE005B926E /* StripeiOS-Shared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "StripeiOS-Shared.xcconfig"; sourceTree = "<group>"; };
-		04F39F151AEF2AFE005B926E /* StripeiOSStatic.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StripeiOSStatic.xcconfig; sourceTree = "<group>"; };
-		04F39F181AEF2AFE005B926E /* StripeiOSStaticFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StripeiOSStaticFramework.xcconfig; sourceTree = "<group>"; };
 		04F416241CA3639500486FB5 /* STPAddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = STPAddCardViewController.h; path = PublicHeaders/Stripe/STPAddCardViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		04F416251CA3639500486FB5 /* STPAddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = STPAddCardViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		04F94D6F1D21CB20004FC826 /* StripeiOSResources.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = StripeiOSResources.xcconfig; sourceTree = "<group>"; };
@@ -1692,8 +1690,6 @@
 				04F39F111AEF2AFE005B926E /* StripeiOS-Release.xcconfig */,
 				04F39F121AEF2AFE005B926E /* StripeiOS-Shared.xcconfig */,
 				04F94D6F1D21CB20004FC826 /* StripeiOSResources.xcconfig */,
-				04F39F151AEF2AFE005B926E /* StripeiOSStatic.xcconfig */,
-				04F39F181AEF2AFE005B926E /* StripeiOSStaticFramework.xcconfig */,
 			);
 			path = BuildConfigurations;
 			sourceTree = "<group>";
