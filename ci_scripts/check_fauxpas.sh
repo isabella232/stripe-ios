@@ -15,13 +15,8 @@ if ! command -v fauxpas > /dev/null; then
   fi
 
   if [[ -z "${FAUX_PAS_LICENSE}" ]]; then
-    echo "ERROR: FAUX_PAS_LICENSE environment variable is missing. Add it to .travis.yaml, after encrypting it:"
-    echo
-    echo "travis encrypt FAUX_PAS_LICENSE=..."
-    echo "https://docs.travis-ci.com/user/environment-variables/#encrypting-environment-variables"
-    echo
-    echo "Any of our organizational seat licenses can be used: http://fauxpasapp.com/faq/#how-does-licensing-work-for-continuous-integration-ci-servers"
-    exit 10
+    echo "WARNING: FAUX_PAS_LICENSE not available, fauxpas won't run."
+    exit 0
   else
     echo "Found FAUX_PAS_LICENSE environment variable"
   fi
