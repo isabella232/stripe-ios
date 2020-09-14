@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   standard-tests:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -15,7 +15,7 @@ jobs:
 
   integration-tests:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -24,7 +24,7 @@ jobs:
 
   ui-and-analyze-tests:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -33,7 +33,7 @@ jobs:
     
   linting-tests:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -43,7 +43,7 @@ jobs:
 
   lint-fauxpas:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -53,7 +53,7 @@ jobs:
 
   test-legacy-11:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
@@ -64,7 +64,7 @@ jobs:
 
   test-legacy-12:
     macos:
-      xcode: 11.6.0 # Specify the Xcode version to use
+      xcode: 11.7.0 # Specify the Xcode version to use
 
     steps:
       - checkout
