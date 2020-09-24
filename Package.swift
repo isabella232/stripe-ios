@@ -34,7 +34,7 @@ let package = Package(
     ),
     .binaryTarget(
       name: "Stripe3DS2",
-      url: "https://github.com/stripe-ios/stripe-3ds2-ios-releases/releases/download/v19.9.9/Stripe3DS2.xcframework.zip",
-      checksum: "2efb524df2480cb9d23dafe4b5e9cb0f91440e7d5d8b94fc1ea4c0a6c969f579"),
+      url: "https://github.com/stripe-ios/stripe-3ds2-ios-releases/releases/download/20.0.1/Stripe3DS2.xcframework.zip",
+      checksum: "303696fe4afa44efd73a821b4057a04e7c3bccca70fd435e7875db03a273c442"),
   ]
 )
