@@ -76,8 +76,6 @@ public class STPSource: NSObject, STPAPIResponseDecodable, STPSourceProtocol, ST
   @objc public var stripeID = ""
   @objc private(set) public var allResponseFields: [AnyHashable: Any] = [:]
 
-  // See STPSource+Private.h
-
   // MARK: - STPSourceType
   class func stringToTypeMapping() -> [String: NSNumber] {
     return [
