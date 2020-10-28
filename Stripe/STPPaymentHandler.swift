@@ -6,14 +6,6 @@
 //  Copyright © 2019 Stripe, Inc. All rights reserved.
 //
 
-//
-//  STPPaymentHandler.h
-//  StripeiOS
-//
-//  Created by Cameron Sabol on 5/10/19.
-//  Copyright © 2019 Stripe, Inc. All rights reserved.
-//
-
 import Foundation
 import PassKit
 import SafariServices

@@ -1340,7 +1340,6 @@
 		317ABE1725117CA100CC59EF /* STPPaymentMethodiDEAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPPaymentMethodiDEAL.swift; sourceTree = "<group>"; };
 		317ABE1825117CA100CC59EF /* STPBackendAPIAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPBackendAPIAdapter.swift; sourceTree = "<group>"; };
 		317ABE1925117CA100CC59EF /* STPStringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPStringUtils.swift; sourceTree = "<group>"; };
-		317ABE1A25117CA100CC59EF /* STPCardValidationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPCardValidationState.swift; sourceTree = "<group>"; };
 		317ABE1B25117CA100CC59EF /* STPFakeAddPaymentPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPFakeAddPaymentPassViewController.swift; sourceTree = "<group>"; };
 		317ABE1C25117CA100CC59EF /* STPFPXBankBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPFPXBankBrand.swift; sourceTree = "<group>"; };
 		317ABE1D25117CA100CC59EF /* STPNumericStringValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPNumericStringValidator.swift; sourceTree = "<group>"; };
@@ -2284,7 +2283,6 @@
 				317ABDDF25117C9D00CC59EF /* STPAPIResponseDecodable.swift */,
 				317ABE0325117C9F00CC59EF /* STPAppInfo.swift */,
 				317ABDB225117C9B00CC59EF /* STPCardBrand.swift */,
-				317ABE1A25117CA100CC59EF /* STPCardValidationState.swift */,
 				317ABDF125117C9E00CC59EF /* STPConnectAccountAddress.swift */,
 				317ABD4625117C9400CC59EF /* STPConnectAccountCompanyParams.swift */,
 				317ABDC525117C9C00CC59EF /* STPConnectAccountIndividualParams.swift */,
