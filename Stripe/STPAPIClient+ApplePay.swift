@@ -17,11 +17,11 @@ extension STPAPIClient {
   @objc(createTokenWithPayment:completion:)
   public func createToken(with payment: PKPayment, completion: @escaping STPTokenCompletionBlock) {
     var params = STPAPIClient.parameters(for: payment)
-    STPTelemetryClient.sharedInstance().addTelemetryFields(toParams: &params)
+    STPTelemetryClient.shared.addTelemetryFields(toParams: &params)
     createToken(
       withParameters: params,
       completion: completion)
-    STPTelemetryClient.sharedInstance().sendTelemetryData()
+    STPTelemetryClient.shared.sendTelemetryData()
   }
 
   /// Converts a PKPayment object into a Stripe source using the Stripe API.
