@@ -13,7 +13,7 @@ import UIKit
 /// - seealso: https://stripe.com/docs/api/payment_methods
 public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOption {
   /// Unique identifier for the object.
-  @objc private(set) public var stripeId: String?
+  @objc private(set) public var stripeId: String
   /// Time at which the object was created. Measured in seconds since the Unix epoch.
   @objc private(set) public var created: Date?
   /// `YES` if the object exists in live mode or the value `NO` if the object exists in test mode.
@@ -78,7 +78,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       // Object
       String(format: "%@: %p", NSStringFromClass(STPPaymentMethod.self), self),
       // Identifier
-      "stripeId = \(stripeId ?? "")",
+      "stripeId = \(stripeId)",
       // STPPaymentMethod details (alphabetical)
       "alipay = \(String(describing: alipay))",
       "auBECSDebit = \(String(describing: auBECSDebit))",
@@ -162,7 +162,8 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
 
   // MARK: - STPAPIResponseDecodable
   /// :nodoc:
-  @objc public override required init() {
+  @objc required init(stripeId: String) {
+    self.stripeId = stripeId
     super.init()
   }
 
@@ -178,7 +179,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       return nil
     }
 
-    let paymentMethod = self.init()
+    let paymentMethod = self.init(stripeId: stripeId)
     paymentMethod.allResponseFields = response
     paymentMethod.stripeId = stripeId
     paymentMethod.created = dict.stp_date(forKey: "created")

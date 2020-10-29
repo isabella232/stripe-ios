@@ -103,7 +103,7 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
   /// `STPPaymentHandler` should not be directly initialized.
   private override init() {
     self.apiClient = STPAPIClient.shared
-    self.threeDSCustomizationSettings = STPThreeDSCustomizationSettings.defaultSettings()
+    self.threeDSCustomizationSettings = STPThreeDSCustomizationSettings()
     super.init()
   }
 
