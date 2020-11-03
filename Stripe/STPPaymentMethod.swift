@@ -120,7 +120,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       "p24": NSNumber(value: STPPaymentMethodType.przelewy24.rawValue),
       "eps": NSNumber(value: STPPaymentMethodType.EPS.rawValue),
       "bancontact": NSNumber(value: STPPaymentMethodType.bancontact.rawValue),
-      "oxxo": NSNumber(value: STPPaymentMethodType.oxxo.rawValue),
+      "oxxo": NSNumber(value: STPPaymentMethodType.OXXO.rawValue),
       "sofort": NSNumber(value: STPPaymentMethodType.sofort.rawValue),
       "alipay": NSNumber(value: STPPaymentMethodType.alipay.rawValue),
       "paypal": NSNumber(value: STPPaymentMethodType.payPal.rawValue),
@@ -275,7 +275,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       return STPLocalizedString("Przelewy24", "Payment Method type brand name.")
     case .bancontact:
       return STPLocalizedString("Bancontact", "Payment Method type brand name")
-    case .oxxo:
+    case .OXXO:
       return STPLocalizedString("OXXO", "Payment Method type brand name")
     case .sofort:
       return STPLocalizedString("Sofort", "Payment Method type brand name")
@@ -295,7 +295,7 @@ public class STPPaymentMethod: NSObject, STPAPIResponseDecodable, STPPaymentOpti
       return true
     case .alipay /* Careful! Revisit this if/when we support recurring Alipay */, .AUBECSDebit,
       .bacsDebit, .SEPADebit, .iDEAL, .FPX, .cardPresent, .giropay, .EPS, .payPal, .przelewy24, .bancontact,
-      .oxxo, .sofort, .grabPay,  // fall through
+      .OXXO, .sofort, .grabPay,  // fall through
       .unknown:
       return false
     @unknown default:

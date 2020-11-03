@@ -500,7 +500,7 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
       .payPal,
       .przelewy24,
       .bancontact,
-      .oxxo:
+      .OXXO:
       return false
 
     case .unknown:
