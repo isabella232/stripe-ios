@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "31DC3D692537BFF000623028"
+               BuildableName = "Stripe3DS2.framework"
+               BlueprintName = "Stripe3DS2"
+               ReferencedContainer = "container:Stripe.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "04CDB4411A5F2E1800B854EE"
                BuildableName = "Stripe.framework"
                BlueprintName = "StripeiOS"
