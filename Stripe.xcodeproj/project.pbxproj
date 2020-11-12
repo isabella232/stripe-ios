@@ -192,6 +192,7 @@
 		3194CF5E231487A200E1940F /* STPFPXBankBrandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194CF5D231487A100E1940F /* STPFPXBankBrandTest.m */; };
 		31A4381E251052C00067F936 /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F15AC18D1DBA9CA90009EADE /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A99FE0251D619800F994E9 /* STPURLCallbackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABD5925117C9500CC59EF /* STPURLCallbackHandler.swift */; };
+		31C26175255DF47E000C5B50 /* Stripe3DS2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D49B0F251D6ABF003FDB84 /* Stripe3DS2.xcframework */; };
 		31C5B86E252E518E00A481A7 /* STPAddCardViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111C3F5252BC79D00207E32 /* STPAddCardViewControllerTest.swift */; };
 		31C5B871252E746200A481A7 /* STPBECSDebitAccountNumberValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111C3A7252BC79000207E32 /* STPBECSDebitAccountNumberValidatorTests.swift */; };
 		31C5B873252E773100A481A7 /* STPPaymentOptionsViewControllerLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111C391252BC78C00207E32 /* STPPaymentOptionsViewControllerLocalizationTests.swift */; };
@@ -1066,6 +1067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				365FC5A921C18F1A0092ADB0 /* Stripe.framework in Frameworks */,
+				31C26175255DF47E000C5B50 /* Stripe3DS2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

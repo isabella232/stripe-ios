@@ -54,6 +54,7 @@ platform :ios do
     install_cocoapods_without_frameworks_objc
     installation_cocoapods_frameworks_objc
     installation_cocoapods_frameworks_swift
+    installation_carthage
   end
 
   lane :preflight do
