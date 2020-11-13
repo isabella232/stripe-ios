@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -192,6 +192,7 @@
 		3194CF5E231487A200E1940F /* STPFPXBankBrandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3194CF5D231487A100E1940F /* STPFPXBankBrandTest.m */; };
 		31A4381E251052C00067F936 /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F15AC18D1DBA9CA90009EADE /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31A99FE0251D619800F994E9 /* STPURLCallbackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABD5925117C9500CC59EF /* STPURLCallbackHandler.swift */; };
+		31C26175255DF47E000C5B50 /* Stripe3DS2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31D49B0F251D6ABF003FDB84 /* Stripe3DS2.xcframework */; };
 		31C5B86E252E518E00A481A7 /* STPAddCardViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111C3F5252BC79D00207E32 /* STPAddCardViewControllerTest.swift */; };
 		31C5B871252E746200A481A7 /* STPBECSDebitAccountNumberValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111C3A7252BC79000207E32 /* STPBECSDebitAccountNumberValidatorTests.swift */; };
 		31C5B873252E773100A481A7 /* STPPaymentOptionsViewControllerLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3111C391252BC78C00207E32 /* STPPaymentOptionsViewControllerLocalizationTests.swift */; };
@@ -226,7 +227,6 @@
 		31D4D6942512EDF900809066 /* UIViewController+Stripe_NavigationItemProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABD9025117C9900CC59EF /* UIViewController+Stripe_NavigationItemProxy.swift */; };
 		31D4D6962512EE0100809066 /* UIViewController+Stripe_ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABDF325117C9E00CC59EF /* UIViewController+Stripe_ParentViewController.swift */; };
 		31D4D69E2512F68D00809066 /* STPStringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABE1925117CA100CC59EF /* STPStringUtils.swift */; };
-		31DC3D7F2537C04300623028 /* Stripe3DS2.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 31D49B0F251D6ABF003FDB84 /* Stripe3DS2.xcframework */; };
 		31F2E875252403AD004D4B5E /* STPRedirectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABDBD25117C9B00CC59EF /* STPRedirectContext.swift */; };
 		31F2E8782524143F004D4B5E /* STPPaymentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABD6225117C9600CC59EF /* STPPaymentResult.swift */; };
 		31F2E87C25241C30004D4B5E /* STPApplePayPaymentOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317ABE2425117CA100CC59EF /* STPApplePayPaymentOption.swift */; };
@@ -470,16 +470,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		31DC3D772537C00300623028 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = 3ds2;
-			dstSubfolderSpec = 16;
-			files = (
-				31DC3D7F2537C04300623028 /* Stripe3DS2.xcframework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		365FC5AC21C18F550092ADB0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -849,7 +839,6 @@
 		31C8644824DDF2550015F7DF /* STPPaymentMethodSofortParamsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STPPaymentMethodSofortParamsTests.m; sourceTree = "<group>"; };
 		31CF06DE2508486F002FED4B /* Stripe.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stripe.xcassets; sourceTree = "<group>"; };
 		31D49B0F251D6ABF003FDB84 /* Stripe3DS2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Stripe3DS2.xcframework; path = InternalFrameworks/Stripe3DS2.xcframework; sourceTree = "<group>"; };
-		31DC3D6A2537BFF000623028 /* Stripe3DS2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stripe3DS2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DC3D6C2537BFF000623028 /* Stripe3DS2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stripe3DS2.h; sourceTree = "<group>"; };
 		31DC3D6D2537BFF000623028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36006C6F244A4D8C002E7C41 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -1066,6 +1055,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				365FC5A921C18F1A0092ADB0 /* Stripe.framework in Frameworks */,
+				31C26175255DF47E000C5B50 /* Stripe3DS2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,7 +1182,6 @@
 				045E7C031A5F41DE004751EF /* StripeiOS Tests.xctest */,
 				3650AA3E21C07E3C002B0893 /* LocalizationTester.app */,
 				3650AA5521C07E3D002B0893 /* LocalizationTesterUITests.xctest */,
-				31DC3D6A2537BFF000623028 /* Stripe3DS2.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1990,22 +1979,6 @@
 			productReference = 04CDB4421A5F2E1800B854EE /* Stripe.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		31DC3D692537BFF000623028 /* Stripe3DS2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31DC3D712537BFF000623028 /* Build configuration list for PBXNativeTarget "Stripe3DS2" */;
-			buildPhases = (
-				31DC3D772537C00300623028 /* CopyFiles */,
-				31DC3D962537C45700623028 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Stripe3DS2;
-			productName = Stripe3DS2;
-			productReference = 31DC3D6A2537BFF000623028 /* Stripe3DS2.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		3650AA3D21C07E3C002B0893 /* LocalizationTester */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3650AA6021C07E3D002B0893 /* Build configuration list for PBXNativeTarget "LocalizationTester" */;
@@ -2063,9 +2036,6 @@
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 1200;
 					};
-					31DC3D692537BFF000623028 = {
-						CreatedOnToolsVersion = 12.0;
-					};
 					3650AA3D21C07E3C002B0893 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -2117,7 +2087,6 @@
 				045E7C021A5F41DE004751EF /* StripeiOS Tests */,
 				3650AA3D21C07E3C002B0893 /* LocalizationTester */,
 				3650AA5421C07E3D002B0893 /* LocalizationTesterUITests */,
-				31DC3D692537BFF000623028 /* Stripe3DS2 */,
 			);
 		};
 /* End PBXProject section */
@@ -2183,24 +2152,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		31DC3D962537C45700623028 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rm -rf \"${BUILT_PRODUCTS_DIR}/Stripe3DS2.framework\"\nmv \"${BUILT_PRODUCTS_DIR}/3ds2/Stripe3DS2.framework\" \"${BUILT_PRODUCTS_DIR}/Stripe3DS2.framework\"\n";
-		};
 		F1122A821DFF7CB900A8B1AF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2809,156 +2760,6 @@
 			};
 			name = Release;
 		};
-		31DC3D6F2537BFF000623028 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Y28TH9SHX7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Stripe3DS2/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.Stripe3DS2;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		31DC3D702537BFF000623028 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = Y28TH9SHX7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Stripe3DS2/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stripe.Stripe3DS2;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		3650AA5C21C07E3D002B0893 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 36FA86272241710700D5B4D4 /* LocalizationTester-Debug.xcconfig */;
@@ -3017,15 +2818,6 @@
 			buildConfigurations = (
 				11C74BBA164043050071C2CA /* Debug */,
 				11C74BBB164043050071C2CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		31DC3D712537BFF000623028 /* Build configuration list for PBXNativeTarget "Stripe3DS2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				31DC3D6F2537BFF000623028 /* Debug */,
-				31DC3D702537BFF000623028 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
