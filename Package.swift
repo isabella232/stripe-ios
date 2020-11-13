@@ -10,7 +10,7 @@ let package = Package(
   products: [
     .library(
       name: "Stripe",
-      targets: ["Stripe"]
+      targets: ["Stripe", "Stripe3DS2"]
     )
   ],
   targets: [
