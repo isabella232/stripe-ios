@@ -55,6 +55,7 @@ platform :ios do
     installation_cocoapods_frameworks_objc
     installation_cocoapods_frameworks_swift
     installation_carthage
+    installation_spm
   end
 
   lane :preflight do
@@ -133,6 +134,12 @@ platform :ios do
   lane :installation_carthage do
     Dir.chdir("..") do
       sh("./Tests/installation_tests/carthage/test.sh")
+    end
+  end
+
+  lane :installation_spm do
+    Dir.chdir("..") do
+      sh("./Tests/installation_tests/swift_package_manager/test.sh")
     end
   end
 
