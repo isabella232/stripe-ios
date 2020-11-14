@@ -2195,10 +2195,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Clean up the Stripe3DS2 headers we imported earlier\nrm -rf \"$TARGET_BUILD_DIR/include\"\n\n# We don't want Stripe3DS2 to be required by our downstream consumers (as the symbols are linked in), so add an empty Stripe3DS2 module to silence the errors when importing Stripe-Swift.h or the swiftinterface.\necho \"module Stripe3DS2 { }\" >> \"$TARGET_BUILD_DIR/Stripe.framework/Modules/module.modulemap\"\n";
+			shellScript = "# Clean up the Stripe3DS2 headers we imported earlier\nrm -rf \"$TARGET_BUILD_DIR/include\"\n\n# We don't want Stripe3DS2 to be required by our downstream consumers (as the symbols are linked in), so add an empty Stripe3DS2 module to silence the errors when importing Stripe-Swift.h or the swiftinterface.\n\nif [ \"$CONFIGURATION\" = \"Release\" ]\nthen\necho \"module Stripe3DS2 { }\" >> \"$TARGET_BUILD_DIR/Stripe.framework/Modules/module.modulemap\"\nfi\n";
 		};
 		F1122A821DFF7CB900A8B1AF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -2719,6 +2720,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				SWIFT_INCLUDE_PATHS = "$(TARGET_BUILD_DIR)/include";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests/StripeiOS Tests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "StripeiOS_Tests-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2737,6 +2739,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				SWIFT_INCLUDE_PATHS = "$(TARGET_BUILD_DIR)/include";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests/StripeiOS Tests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "StripeiOS_Tests-Swift.h";
 				SWIFT_VERSION = 5.0;
