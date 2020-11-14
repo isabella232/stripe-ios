@@ -289,7 +289,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/../InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/Headers/";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -343,7 +342,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/../InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/Headers/";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
