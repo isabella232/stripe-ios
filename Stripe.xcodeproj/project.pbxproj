@@ -2177,7 +2177,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Hack for Carthage + Xcode 12\nif [ \"$CARTHAGE\" = \"YES\" ]\nthen\n      echo \"In Carthage, assemble xcframework\"\n      if [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n        echo \"Copying Stripe3DS2 for iOS\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      else\n        echo \"Copying Stripe3DS2 for sim\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      fi\nfi\n";
+			shellScript = "# Clean up the Stripe3DS2 headers we imported earlier\nrm -rf \"$TARGET_BUILD_DIR/include\"\n\n# Hack for Carthage + Xcode 12\nif [ \"$CARTHAGE\" = \"YES\" ]\nthen\n      echo \"In Carthage, assemble xcframework\"\n      if [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n        echo \"Copying Stripe3DS2 for iOS\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      else\n        echo \"Copying Stripe3DS2 for sim\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      fi\nfi\n";
 		};
 		31C2621F255F8B15000C5B50 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
