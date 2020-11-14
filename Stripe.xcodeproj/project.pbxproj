@@ -2194,7 +2194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Hack to remove Stripe3DS2 from the exported Objective-C headers\nsed -i '' -E 's/@import[[:space:]]Stripe3DS2//g' \"$TARGET_BUILD_DIR/Stripe.framework/Headers/Stripe-Swift.h\"\nsed -i '' -E 's/<STDSChallengeStatusReceiver>//g' \"$TARGET_BUILD_DIR/Stripe.framework/Headers/Stripe-Swift.h\"\n";
+			shellScript = "# Hack to remove Stripe3DS2 from the exported Objective-C headers\n#sed -i '' -E 's/@import[[:space:]]Stripe3DS2//g' \"$TARGET_BUILD_DIR/Stripe.framework/Headers/Stripe-Swift.h\"\n#sed -i '' -E 's/<STDSChallengeStatusReceiver>//g' \"$TARGET_BUILD_DIR/Stripe.framework/Headers/Stripe-Swift.h\"\n\n# Hack to add empty Stripe3DS2 module.\nrm -rf \"$TARGET_BUILD_DIR/include\"\necho \"module Stripe3DS2 { }\" >> \"$TARGET_BUILD_DIR/Stripe.framework/Modules/module.modulemap\"\n";
 		};
 		F1122A821DFF7CB900A8B1AF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

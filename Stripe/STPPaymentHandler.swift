@@ -1406,11 +1406,11 @@ public class STPPaymentHandler: NSObject, SFSafariViewControllerDelegate, STPURL
 }
 
 @available(iOSApplicationExtension, unavailable)
-extension STPPaymentHandler: STDSChallengeStatusReceiver {
+private extension STPPaymentHandler {
   // MARK: - STPChallengeStatusReceiver
   /// :nodoc:
-  @objc
-  public func transaction(
+  @objc(transaction:didCompleteChallengeWithCompletionEvent:)
+  dynamic func transaction(
     _ transaction: STDSTransaction, didCompleteChallengeWith completionEvent: STDSCompletionEvent
   ) {
     guard let currentAction = currentAction else {
@@ -1442,8 +1442,8 @@ extension STPPaymentHandler: STDSChallengeStatusReceiver {
   }
 
   /// :nodoc:
-  @objc
-  public func transactionDidCancel(_ transaction: STDSTransaction) {
+  @objc(transactionDidCancel:)
+  dynamic func transactionDidCancel(_ transaction: STDSTransaction) {
     guard let currentAction = currentAction else {
       assert(false, "Calling transactionDidCancel without currentAction.")
       return
@@ -1460,8 +1460,8 @@ extension STPPaymentHandler: STDSChallengeStatusReceiver {
   }
 
   /// :nodoc:
-  @objc
-  public func transactionDidTimeOut(_ transaction: STDSTransaction) {
+  @objc(transactionDidTimeOut:)
+  dynamic func transactionDidTimeOut(_ transaction: STDSTransaction) {
     guard let currentAction = currentAction else {
       assert(false, "Calling transactionDidTimeOut without currentAction.")
       return
@@ -1480,8 +1480,8 @@ extension STPPaymentHandler: STDSChallengeStatusReceiver {
   }
 
   /// :nodoc:
-  @objc
-  public func transaction(
+  @objc(transaction:didErrorWithProtocolErrorEvent:)
+  dynamic func transaction(
     _ transaction: STDSTransaction, didErrorWith protocolErrorEvent: STDSProtocolErrorEvent
   ) {
 
@@ -1511,8 +1511,8 @@ extension STPPaymentHandler: STDSChallengeStatusReceiver {
   }
 
   /// :nodoc:
-  @objc
-  public func transaction(
+  @objc(transaction:didErrorWithRuntimeErrorEvent:)
+  dynamic func transaction(
     _ transaction: STDSTransaction, didErrorWith runtimeErrorEvent: STDSRuntimeErrorEvent
   ) {
 
@@ -1543,8 +1543,8 @@ extension STPPaymentHandler: STDSChallengeStatusReceiver {
   }
 
   /// :nodoc:
-  @objc
-  public func transactionDidPresentChallengeScreen(_ transaction: STDSTransaction) {
+  @objc(transactionDidPresentChallengeScreen:)
+  dynamic func transactionDidPresentChallengeScreen(_ transaction: STDSTransaction) {
 
     guard let currentAction = currentAction else {
       assert(false, "Calling didErrorWith runtimeErrorEvent without currentAction.")

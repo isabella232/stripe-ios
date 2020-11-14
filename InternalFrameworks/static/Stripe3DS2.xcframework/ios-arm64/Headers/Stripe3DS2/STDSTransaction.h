@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)doChallengeWithViewController:(UIViewController *)presentingViewController
                   challengeParameters:(STDSChallengeParameters *)challengeParameters
-              challengeStatusReceiver:(id<STDSChallengeStatusReceiver>)challengeStatusReceiver
+              challengeStatusReceiver:(id)challengeStatusReceiver
                               timeout:(NSTimeInterval)timeout;
 
 /**
