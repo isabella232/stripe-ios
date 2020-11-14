@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-#if canImport(Stripe3DS2)
 import Stripe3DS2
-#endif
 
 /// The Challenge view displays a footer with additional details that
 /// expand when tapped. This object configures the appearance of that view.

@@ -8,9 +8,7 @@
 
 import Foundation
 
-#if canImport(Stripe3DS2)
 import Stripe3DS2
-#endif
 
 @available(iOSApplicationExtension, unavailable)
 internal protocol STPPaymentHandlerActionParams: AnyObject {

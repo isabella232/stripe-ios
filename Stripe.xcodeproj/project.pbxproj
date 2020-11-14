@@ -2160,7 +2160,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This is a hack for Carthage + Xcode 12\n\nif [ \"$CARTHAGE\" = \"YES\" ]\nthen\n      echo \"In Carthage, assemble xcframework\"\n      cp -a  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/Headers/.\" \"$TARGET_BUILD_DIR/include\"\n\n      if [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n        echo \"Copying Stripe3DS2 for iOS\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      else\n        echo \"Copying Stripe3DS2 for sim\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      fi\nfi\n";
+			shellScript = "# Manually copy the headers into the build include directory to simulate a proper xcframework extraction\ncp -a  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/Headers/.\" \"$TARGET_BUILD_DIR/include\"\n\n# This is a hack for Carthage + Xcode 12\nif [ \"$CARTHAGE\" = \"YES\" ]\nthen\n      echo \"In Carthage, assemble xcframework\"\n\n      if [ \"$EFFECTIVE_PLATFORM_NAME\" = \"-iphoneos\" ]; then\n        echo \"Copying Stripe3DS2 for iOS\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      else\n        echo \"Copying Stripe3DS2 for sim\"\n        cp  \"$PROJECT_DIR/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/libStripe3DS2.a\" \"$TARGET_BUILD_DIR/libStripe3DS2.a\"\n      fi\nfi\n";
 		};
 		31C261FD255F6CA6000C5B50 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2194,7 +2194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Hack to remove Stripe3DS2 from the exported Objective-C headers\n#sed -i '' -E 's/@import[[:space:]]Stripe3DS2//g' \"$TARGET_BUILD_DIR/Stripe.framework/Headers/Stripe-Swift.h\"\n#sed -i '' -E 's/<STDSChallengeStatusReceiver>//g' \"$TARGET_BUILD_DIR/Stripe.framework/Headers/Stripe-Swift.h\"\n\n# Hack to add empty Stripe3DS2 module.\nrm -rf \"$TARGET_BUILD_DIR/include\"\necho \"module Stripe3DS2 { }\" >> \"$TARGET_BUILD_DIR/Stripe.framework/Modules/module.modulemap\"\n";
+			shellScript = "# Clean up the Stripe3DS2 headers we imported earlier\nrm -rf \"$TARGET_BUILD_DIR/include\"\n\n# We don't want Stripe3DS2 to be required by our downstream consumers (as the symbols are linked in), so add an empty Stripe3DS2 module to silence the errors when importing Stripe-Swift.h or the swiftinterface.\necho \"module Stripe3DS2 { }\" >> \"$TARGET_BUILD_DIR/Stripe.framework/Modules/module.modulemap\"\n";
 		};
 		F1122A821DFF7CB900A8B1AF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

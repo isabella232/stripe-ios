@@ -10,9 +10,7 @@ import Foundation
 import PassKit
 import UIKit
 
-#if canImport(Stripe3DS2)
 import Stripe3DS2
-#endif
 
 /// A client for making connections to the Stripe API.
 public class STPAPIClient: NSObject {

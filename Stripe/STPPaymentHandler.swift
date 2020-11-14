@@ -10,9 +10,7 @@ import Foundation
 import PassKit
 import SafariServices
 
-#if canImport(Stripe3DS2)
 import Stripe3DS2
-#endif
 
 /// `STPPaymentHandlerActionStatus` represents the possible outcomes of requesting an action by `STPPaymentHandler`. An action could be confirming and/or handling the next action for a PaymentIntent.
 @objc public enum STPPaymentHandlerActionStatus: Int {
