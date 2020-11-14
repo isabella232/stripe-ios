@@ -2720,7 +2720,6 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				SWIFT_INCLUDE_PATHS = "$(TARGET_BUILD_DIR)/include";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests/StripeiOS Tests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "StripeiOS_Tests-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2739,7 +2738,6 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				SWIFT_INCLUDE_PATHS = "$(TARGET_BUILD_DIR)/include";
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests/StripeiOS Tests-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "StripeiOS_Tests-Swift.h";
 				SWIFT_VERSION = 5.0;
