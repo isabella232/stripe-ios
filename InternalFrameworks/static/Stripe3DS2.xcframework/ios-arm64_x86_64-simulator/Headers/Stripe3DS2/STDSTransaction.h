@@ -56,6 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
  
  @exception STDSInvalidInputException    Thrown if an argument is invalid (e.g. timeout less than 5 minutes).  @see STDSInvalidInputException
  @exception STDSSDKRuntimeException      Thrown if an internal error is encountered, and if you call this method after calling `close`.  @see SDKRuntimeException
+ 
+ @note challengeStatusReceiver must conform to <STDSChallengeStatusReceiver>. This is a workaround: When the static Stripe3DS2 is compiled into Stripe.framework, the resulting swiftinterface and generated .h files reference this protocol. To allow users to build without including Stripe3DS2 directly, we'll take an `id` here instead.
  */
 - (void)doChallengeWithViewController:(UIViewController *)presentingViewController
                   challengeParameters:(STDSChallengeParameters *)challengeParameters

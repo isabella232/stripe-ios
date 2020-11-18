@@ -103,4 +103,3 @@ PRODUCT_NAME = $(TARGET_NAME)
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 
 LIBRARY_SEARCH_PATHS = $(inherited)  $(PROJECT_DIR)/InternalFrameworks/static/Stripe3DS2.xcframework/ios-arm64_x86_64-simulator/Headers/
-OTHER_LDFLAGS = $(inherited) -ObjC
